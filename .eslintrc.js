@@ -21,5 +21,6 @@ module.exports = {
         ignores: ["Map"],
       },
     ],
+    "prettier/prettier": "off"
   },
 };
