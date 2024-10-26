@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ElMessage } from "element-plus";
 import { column } from "element-plus/es/components/table-v2/src/common";
 import { defineProps, watch, ref } from "vue";
 
@@ -85,6 +86,31 @@ watch(
     }
   }
 );
+
+// const Record = ref<{ [key: string]: any } | null>(null);
+// watch(
+//   () => [props.pointData, props.date],
+//   async (newval) => {
+//     const [pointData, date] = newval;
+//     if(pointData & date){
+//       try {
+//         const response = await axios.get("url",{
+//           params: {
+//             lat : pointData.lat,
+//             lng : pointData.lng,
+//             date : date,
+//           }
+//         });
+//         Record.value = response.data;
+//         DialogShow.value = true;
+//       } catch(error) {
+//         ElMessage.error("获取气象记录失败，请稍后。");
+//         DialogShow.value = false;
+//       }
+//     }
+//   },
+//   {immediate: true}
+// );
 </script>
 
 <template>
